@@ -12,7 +12,8 @@
 #include <stdio.h>
 #include <string>
 #include <iostream>
-#include "Customer.hpp"
+#include <vector>
+//#include "Customer.hpp"
 
 using namespace std;
 
@@ -49,8 +50,7 @@ public:
      one table. All tables are assumed to have zero customers and when
      a table is assigned to an individual or a party we have to know
      how many people will be sitting at that table*/
-    //vector <Customer> Cust(N);
-    
+    vector<int> Customer[1][4];
     //Pointer: It points to the next table on the list
     Table *next;
     
