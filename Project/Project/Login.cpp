@@ -13,7 +13,7 @@
 
 string manager [2][3] =
     {
-        {"admam","casey","john"},
+        {"admm","casey","john"},
         {"1234" , "5678","3434"}
     };
 
@@ -25,32 +25,49 @@ string waiter [2][5] =
 
 void login()
 {
-    int count = 0;
+    string username;
+    string password;
+    int count = 1;
     int stafftype = 0;
     while (stafftype == 0)
     {
         if (count > 3 )
         {
-            cout << "3 attempts used:";
-            count = 0;
+            system("CLS");
+            cout << "3 attempts used. Please wait 5 seconds." << endl << endl;
+            count = 1;
             sleep(5);
         }
-        string username;
-        string password;
+        system("CLS");
+        cout << "Enter 'quit' int the 'Username' field to exit the program" << endl;
         cout << "Enter Username: ";
         cin >> username;
+        if (username == "quit")
+        {
+            cout << "Quitting program" << endl;
+            return;
+        }
         cout << "Enter Password: ";
         cin >> password;
         stafftype = checkusername(username, password);
+        if (stafftype == 0)
+        {
+            system("CLS");
+            cout << "Incorrect username or password. Try again." << endl;
+        }
         count++;
     }
     
     if (stafftype == 1)
     {
+        system("CLS");
+        cout << "Manager login recognized" << endl;
         managermodule();
     }
     if (stafftype == 2)
     {
+        system("CLS");
+        cout << "Wait Staff login recognized" << endl;
         waitermodule();
     }
 }

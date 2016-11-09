@@ -1,22 +1,19 @@
 //
-//  CreateOrders.cpp
+//  Stats.cpp
 //  Project
 //
 //  Created by Sanjay Soundarajan on 11/8/16.
 //  Copyright © 2016 INSERT TEAM NAME HERE. All rights reserved.
 //
 
-#include "CreateOrders.hpp"
+#include "Stats.hpp"
 
-void Orders()
+void statsCheck()
 {
     
-    
-    
-    // After ordering and dining
-    updateStats();
-    splitBills();
 }
 
-
-
+void updateStats()
+{
+    
+}

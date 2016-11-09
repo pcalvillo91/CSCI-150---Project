@@ -1,19 +1,17 @@
 //
-//  Manager.hpp
+//  BillSplit.hpp
 //  Project
 //
 //  Created by Sanjay Soundarajan on 11/8/16.
 //  Copyright © 2016 INSERT TEAM NAME HERE. All rights reserved.
 //
 
-#ifndef Manager_hpp
-#define Manager_hpp
+#ifndef BillSplit_hpp
+#define BillSplit_hpp
 
 #include <stdio.h>
 #include "CreateOrders.hpp"
-#include "Menu.hpp"
-#include "Stats.hpp"
 
-void managermodule();
+void splitBills();
 
-#endif /* Manager_hpp */
+#endif /* BillSplit_hpp */

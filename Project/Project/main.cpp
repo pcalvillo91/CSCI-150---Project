@@ -13,6 +13,7 @@
 #include "Login.hpp"
 #include "Menu.hpp"
 #include <stdlib.h>
+//#include <curses.h>
 
 using namespace std;
 
@@ -39,7 +40,11 @@ int main(int argc, const char * argv[]) {
     
     menuPopulate();     // Create the menu data structure
     
-    system("CLS");      // Clear screen in windows. Dooesn't work on macs
+    //system("CLS");      // Clear screen in windows. Dooesn't work on macs
+    //clear();
+    //refresh();
+    //cout << "\033[2J\033[1;1H";
+    //system("clear");
     login();
     
     return 0;
