@@ -9,7 +9,7 @@
 #include "SLL.hpp"
 #include "Table.hpp"
 
-int tTableNum = 1;
+int TableNum = 1;
 
 SLL::SLL()
 {
@@ -103,7 +103,7 @@ void SLL::insertToBack(int TableNumber){
     Table *temp; //create temporary Table node
     temp = new Table; //Create new table
     temp->classTableNum = TableNumber; //assign table number
-    tTableNum++;  //increment global variable by one
+    TableNum++;  //increment global variable by one
     temp->next = NULL;
     
     if(head != NULL){

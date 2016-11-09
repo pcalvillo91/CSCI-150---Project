@@ -7,14 +7,20 @@
 //
 
 #include <iostream>
-#include "Customer.hpp"
+//#include "Customer.hpp"
 #include "SLL.hpp"
 #include "Table.hpp"
+#include "Login.hpp"
+#include "Menu.hpp"
+#include <stdlib.h>
+
 using namespace std;
+
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    
+    string loginusername;
+    string loginpassword;
     //Declare object for restaurant tables
     SLL RestTables;
     //How many tables are going to be created?
@@ -30,5 +36,11 @@ int main(int argc, const char * argv[]) {
     
     
     RestTables.printAll();
+    
+    menuPopulate();     // Create the menu data structure
+    
+    system("CLS");      // Clear screen in windows. Dooesn't work on macs
+    login();
+    
     return 0;
 }

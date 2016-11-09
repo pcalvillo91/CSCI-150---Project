@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <string>
 #include <iostream>
+#include "Customer.hpp"
 
 using namespace std;
 
