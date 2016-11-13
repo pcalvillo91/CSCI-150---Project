@@ -17,9 +17,8 @@ void Orders()
     int e;
     int choice, choicea, choiceb;
 
-    while (exit == 0){
-//        cout << "Press exit anytime to return to main menu" << endl;
-
+    while (input!= "exit"){
+        cout << "Press exit anytime to return to main menu" << endl;
 ///Load Current Table Numbers
 
 ///Select Table
@@ -52,10 +51,13 @@ void Orders()
                                     switch (custom) {
                                         case 1 :
                                             //add lemon
+                                            break;
                                         case 2 :
                                             //No ice
+                                            break;
                                     }
                                 }
+                                break;
                             case 2 : //Cheese Burger
                                 cout << "Customize order? (Y/N)" << endl;
                                 cin >> b;
@@ -65,10 +67,13 @@ void Orders()
                                     switch (custom) {
                                         case 1 :
                                             //Make large
+                                            break;
                                         case 2 :
                                             //No ice
+                                            break;
                                     }
                                 }
+                                break;
                             case 3 : //Fries
                                 cout << "Customize order? (Y/N)" << endl;
                                 cin >> b;
@@ -82,6 +87,7 @@ void Orders()
                                             //No ice
                                     }
                                 }
+                                break;
                             case 4 : //Hotdog
                                 cout << "Customize order? (Y/N)" << endl;
                                 cin >> b;
@@ -95,6 +101,7 @@ void Orders()
                                             //No ice
                                     }
                                 }
+                                break;
                             case 5 : //Bacon CheeseBurger
                                 cout << "Customize order? (Y/N)" << endl;
                                 cin >> b;
@@ -108,8 +115,10 @@ void Orders()
                                             //No ice
                                     }
                                 }
+                                break;
+                            }
                         case 2 : //Dinner
-                       cout << "What food? (1) Turkey (2) Chicken (3) Tri-Tip"
+                        cout << "What food? (1) Turkey (2) Chicken (3) Tri-Tip"
                         cin >> choiceb;
                         switch (choiceb) {
                             case 1 : //Turkey
@@ -125,6 +134,7 @@ void Orders()
                                             //No ice
                                     }
                                 }
+                                break;
                             case 2 : //Chicken
                                 cout << "Customize order? (Y/N)" << endl;
                                 cin >> b;
@@ -138,6 +148,7 @@ void Orders()
                                             //No ice
                                     }
                                 }
+                                break;
                             case 3 : //Tri-Tip
                                 cout << "Customize order? (Y/N)" << endl;
                                 cin >> b;
@@ -151,9 +162,12 @@ void Orders()
                                             //No ice
                                     }
                                 }
+                                break;
                         }
+                    }
 ///Expand food menu, use switch to add customizing on order, push end result to customer's vector
                     break;
+
                 case 2 : //Drink
                     cout << "What drink? (1) Water (2) Soda"
                     cin >> choiceb;
@@ -171,6 +185,7 @@ void Orders()
                                         //No ice
                                 }
                             }
+                            break;
                         case 2 : //Soda
                             cout << "Customize order? (Y/N)" << endl;
                             cin >> b;
@@ -184,37 +199,22 @@ void Orders()
                                         //No ice
                                 }
                             }
+                            break;
                     }
-///Expand drink menu, use switch to add customizing on order, push end result to customer's vector
-                    cout << "Customize order? (Y/N)" << endl;
-                    cin >> a;
-                    if (a == 'Y') {
-                        cout << "Choose a customization for customer: (1) Lemon (2) No Ice"
-                        cin >> drink;
-                            switch (drink) {
-                                case 1 :
-                                    //add lemon
-                                case 2 :
-                                    //No ice
-                            }
-                    }
-                    break;
                 default :
                     break;
             }
             cout << "Are there more customer orders for current table? (Y/N)" << endl;
             cin >> m;
             if (m == 'N'){
-                exit = 1;
                 i = 0;
+                updateStats();
+                return;
             }
         }
 
 
     }
-
-/// After ordering and dining
-    updateStats();
-    splitBills();
+    return;
 }
 
