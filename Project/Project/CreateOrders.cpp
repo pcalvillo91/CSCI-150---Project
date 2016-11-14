@@ -14,7 +14,7 @@ void Orders()
     string a;
     int i = 1;
     int exit = 0;
-    int e;
+    int e, time, custom, b;
     int choice, choicea, choiceb;
 
     while (input!= "exit"){
@@ -46,75 +46,96 @@ void Orders()
                                 cout << "Customize order? (Y/N)" << endl;
                                 cin >> b;
                                 if (b == 'Y') {
-                                    cout << "Choose a customization for customer: (1) Lemon (2) No Ice"
+                                    cout << "Choose a customization for customer: (1) Ketchup (2) Mustard"
                                     cin >> custom;
                                     switch (custom) {
                                         case 1 :
-                                            //add lemon
+                                            //add Ketchup
+                                            //push 1111
                                             break;
                                         case 2 :
-                                            //No ice
+                                            //add mustard
+                                            //push 1112
                                             break;
                                     }
                                 }
+                                //push 111
                                 break;
                             case 2 : //Cheese Burger
                                 cout << "Customize order? (Y/N)" << endl;
                                 cin >> b;
                                 if (b == 'Y') {
-                                    cout << "Choose a customization for customer: (1) Extra Large (2) No Ice"
+                                    cout << "Choose a customization for customer: (1) Ketchup (2) Mustard"
                                     cin >> custom;
                                     switch (custom) {
                                         case 1 :
-                                            //Make large
+                                            //add Ketchup
+                                            //push 1121
                                             break;
                                         case 2 :
-                                            //No ice
+                                            //add mustard
+                                            //push 1122
                                             break;
                                     }
                                 }
+                                //push 112
                                 break;
                             case 3 : //Fries
                                 cout << "Customize order? (Y/N)" << endl;
                                 cin >> b;
                                 if (b == 'Y') {
-                                    cout << "Choose a customization for customer: (1) Lemon (2) No Ice"
+                                    cout << "Choose a customization for customer: (1) Ketchup (2) Mustard"
                                     cin >> custom;
                                     switch (custom) {
                                         case 1 :
-                                            //add lemon
+                                            //add Ketchup
+                                            //push 1131
+                                            break;
                                         case 2 :
-                                            //No ice
+                                            //add mustard
+                                            //push 1132
+                                            break;
                                     }
                                 }
+                                //push 113
                                 break;
                             case 4 : //Hotdog
                                 cout << "Customize order? (Y/N)" << endl;
                                 cin >> b;
                                 if (b == 'Y') {
-                                    cout << "Choose a customization for customer: (1) Extra Large (2) No Ice"
+                                    cout << "Choose a customization for customer: (1) Ketchup (2) Mustard"
                                     cin >> custom;
                                     switch (custom) {
                                         case 1 :
-                                            //Make large
+                                            //add Ketchup
+                                            //push 1141
+                                            break;
                                         case 2 :
-                                            //No ice
+                                            //add mustard
+                                            //push 1142
+                                            break;
                                     }
                                 }
+                                //push 114
                                 break;
                             case 5 : //Bacon CheeseBurger
                                 cout << "Customize order? (Y/N)" << endl;
                                 cin >> b;
                                 if (b == 'Y') {
-                                    cout << "Choose a customization for customer: (1) Extra Large (2) No Ice"
+                                    cout << "Choose a customization for customer: (1) Ketchup (2) Mustard"
                                     cin >> custom;
                                     switch (custom) {
                                         case 1 :
-                                            //Make large
+                                            //add Ketchup
+                                            //push 1151
+                                            break;
                                         case 2 :
-                                            //No ice
+                                            //add mustard
+                                            //push 1152
+                                            break;
                                     }
                                 }
+                                //push 115
                                 break;
                             }
                         case 2 : //Dinner
@@ -125,49 +146,62 @@ void Orders()
                                 cout << "Customize order? (Y/N)" << endl;
                                 cin >> b;
                                 if (b == 'Y') {
-                                    cout << "Choose a customization for customer: (1) Lemon (2) No Ice"
+                                    cout << "Choose a customization for customer: (1) Ketchup (2) Mustard"
                                     cin >> custom;
                                     switch (custom) {
                                         case 1 :
-                                            //add lemon
+                                            //add Ketchup
+                                            //push 1211
+                                            break;
                                         case 2 :
-                                            //No ice
+                                            //add mustard
+                                            //push 1212
+                                            break;
                                     }
                                 }
+                                //push 121
                                 break;
                             case 2 : //Chicken
                                 cout << "Customize order? (Y/N)" << endl;
                                 cin >> b;
                                 if (b == 'Y') {
-                                    cout << "Choose a customization for customer: (1) Extra Large (2) No Ice"
+                                    cout << "Choose a customization for customer: (1) Ketchup (2) Mustard"
                                     cin >> custom;
                                     switch (custom) {
                                         case 1 :
-                                            //Make large
+                                            //add Ketchup
+                                            //push 1221
+                                            break;
                                         case 2 :
-                                            //No ice
+                                            //add mustard
+                                            //push 1222
+                                            break;
                                     }
                                 }
+                                //push 122
                                 break;
                             case 3 : //Tri-Tip
                                 cout << "Customize order? (Y/N)" << endl;
                                 cin >> b;
                                 if (b == 'Y') {
-                                    cout << "Choose a customization for customer: (1) Lemon (2) No Ice"
+                                    cout << "Choose a customization for customer: (1) Ketchup (2) Mustard"
                                     cin >> custom;
                                     switch (custom) {
                                         case 1 :
-                                            //add lemon
+                                            //add Ketchup
+                                            //push 1231
+                                            break;
                                         case 2 :
-                                            //No ice
+                                            //add mustard
+                                            //push 1232
+                                            break;
                                     }
                                 }
+                                //push 123
                                 break;
                         }
                     }
-///Expand food menu, use switch to add customizing on order, push end result to customer's vector
                     break;
-
                 case 2 : //Drink
                     cout << "What drink? (1) Water (2) Soda"
                     cin >> choiceb;
@@ -181,10 +215,13 @@ void Orders()
                                 switch (custom) {
                                     case 1 :
                                         //add lemon
+                                        // push 211
                                     case 2 :
                                         //No ice
+                                        //push 212
                                 }
                             }
+                            //push 21
                             break;
                         case 2 : //Soda
                             cout << "Customize order? (Y/N)" << endl;
@@ -195,10 +232,13 @@ void Orders()
                                 switch (custom) {
                                     case 1 :
                                         //Make large
+                                        //push 221
                                     case 2 :
                                         //No ice
+                                        //push 222
                                 }
                             }
+                            //push 22
                             break;
                     }
                 default :
@@ -212,8 +252,6 @@ void Orders()
                 return;
             }
         }
-
-
     }
     return;
 }
