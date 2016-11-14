@@ -14,22 +14,31 @@ void Orders()
     string a;
     int i = 1;
     int exit = 0;
-    int e, time, custom, b;
+    int o, time, custom, b, customer;
     int choice, choicea, choiceb;
+    int tablenum;
+    Table* p = head;
+    int input = 0;
+    vector<int> inputvector;
 
     while (input!= "exit"){
         cout << "Press exit anytime to return to main menu" << endl;
-///Load Current Table Numbers
-
 ///Select Table
         cout << "Input table number for current order" << endl;
-        cin >> table; //Varies depending on how tables are stored
-///Load customers??? Unless already linked to tables
+        cin >> tablenum; //Varies depending on how tables are stored
+
+        while ((p->classTableNum) != tablenum)
+        {
+            p = p->next;
+        }
 
         while (i == 1) {
 ///Select Customer
             cout << "Please input customer number" << endl;
             cin >> customer; //Varies depending on how customers are stored
+            while ((p->Customer[0][customer]).empty()){
+                cout << "Incorrect input. Please choose a different number." << endl ;
+            }
 ///Select food or drink
             cout << "Press 1 for Food, 2 for Drink" << endl;
             cin >> choice;
@@ -51,15 +60,15 @@ void Orders()
                                     switch (custom) {
                                         case 1 :
                                             //add Ketchup
-                                            //push 1111
+                                            o = 1111;
                                             break;
                                         case 2 :
                                             //add mustard
-                                            //push 1112
+                                            o = 1112;
                                             break;
                                     }
                                 }
-                                //push 111
+                                o = 111;
                                 break;
                             case 2 : //Cheese Burger
                                 cout << "Customize order? (Y/N)" << endl;
@@ -70,15 +79,15 @@ void Orders()
                                     switch (custom) {
                                         case 1 :
                                             //add Ketchup
-                                            //push 1121
+                                            o = 1121;
                                             break;
                                         case 2 :
                                             //add mustard
-                                            //push 1122
+                                            o = 1122;
                                             break;
                                     }
                                 }
-                                //push 112
+                                o = 112;
                                 break;
                             case 3 : //Fries
                                 cout << "Customize order? (Y/N)" << endl;
@@ -89,15 +98,15 @@ void Orders()
                                     switch (custom) {
                                         case 1 :
                                             //add Ketchup
-                                            //push 1131
+                                            o = 1131;
                                             break;
                                         case 2 :
                                             //add mustard
-                                            //push 1132
+                                            o = 1132;
                                             break;
                                     }
                                 }
-                                //push 113
+                                o = 113;
                                 break;
                             case 4 : //Hotdog
                                 cout << "Customize order? (Y/N)" << endl;
@@ -108,15 +117,15 @@ void Orders()
                                     switch (custom) {
                                         case 1 :
                                             //add Ketchup
-                                            //push 1141
+                                            o = 1141;
                                             break;
                                         case 2 :
                                             //add mustard
-                                            //push 1142
+                                            o = 1142;
                                             break;
                                     }
                                 }
-                                //push 114
+                                o = 114;
                                 break;
                             case 5 : //Bacon CheeseBurger
                                 cout << "Customize order? (Y/N)" << endl;
@@ -127,15 +136,15 @@ void Orders()
                                     switch (custom) {
                                         case 1 :
                                             //add Ketchup
-                                            //push 1151
+                                            o = 1151;
                                             break;
                                         case 2 :
                                             //add mustard
-                                            //push 1152
+                                            o = 1152;
                                             break;
                                     }
                                 }
-                                //push 115
+                                o = 115;
                                 break;
                             }
                         case 2 : //Dinner
@@ -151,15 +160,15 @@ void Orders()
                                     switch (custom) {
                                         case 1 :
                                             //add Ketchup
-                                            //push 1211
+                                            o = 1211;
                                             break;
                                         case 2 :
                                             //add mustard
-                                            //push 1212
+                                            o = 1212;
                                             break;
                                     }
                                 }
-                                //push 121
+                                o = 121;
                                 break;
                             case 2 : //Chicken
                                 cout << "Customize order? (Y/N)" << endl;
@@ -170,15 +179,15 @@ void Orders()
                                     switch (custom) {
                                         case 1 :
                                             //add Ketchup
-                                            //push 1221
+                                            o = 1221;
                                             break;
                                         case 2 :
                                             //add mustard
-                                            //push 1222
+                                            o = 1222;
                                             break;
                                     }
                                 }
-                                //push 122
+                                o = 122;
                                 break;
                             case 3 : //Tri-Tip
                                 cout << "Customize order? (Y/N)" << endl;
@@ -189,15 +198,15 @@ void Orders()
                                     switch (custom) {
                                         case 1 :
                                             //add Ketchup
-                                            //push 1231
+                                            o = 1231;
                                             break;
                                         case 2 :
                                             //add mustard
-                                            //push 1232
+                                            o = 1232;
                                             break;
                                     }
                                 }
-                                //push 123
+                                o = 123;
                                 break;
                         }
                     }
@@ -215,13 +224,13 @@ void Orders()
                                 switch (custom) {
                                     case 1 :
                                         //add lemon
-                                        // push 211
+                                        o = 211;
                                     case 2 :
                                         //No ice
-                                        //push 212
+                                        o = 212;
                                 }
                             }
-                            //push 21
+                            o = 21;
                             break;
                         case 2 : //Soda
                             cout << "Customize order? (Y/N)" << endl;
@@ -232,13 +241,13 @@ void Orders()
                                 switch (custom) {
                                     case 1 :
                                         //Make large
-                                        //push 221
+                                        o = 221;
                                     case 2 :
                                         //No ice
-                                        //push 222
+                                        o = 222;
                                 }
                             }
-                            //push 22
+                            o = 22;
                             break;
                     }
                 default :
@@ -252,6 +261,13 @@ void Orders()
                 return;
             }
         }
+    }
+
+    while(customer!= 0)
+    {
+        inputvector.push_back(o);
+        cout << "Press 0 to exit" << endl;
+        cin >> customer;
     }
     return;
 }
